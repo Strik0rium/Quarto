@@ -1,0 +1,27 @@
+\usepackage{titlesec} % 控制章节标题样式
+\usepackage{tocloft} % 控制目录样式
+\usepackage{xcolor}  % 自定义颜色
+
+\titleformat{\chapter}[display]
+    {\huge\bfseries\filleft}
+    {\setlength{\parskip}{0em}\rule{\textwidth}{0.4pt} \\ 第 \thechapter 章}{0pt}{\setlength{\parskip}{0em}\Huge}
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]{\large\bfseries}{\thesubsection}{1em}{}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3} % 设置编号深度，启用 subsubsection 的编号
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}.}
+\titleformat{\subsubsection}[hang]{\normalsize\bfseries}{\thesubsubsection}{0.5em}{}
+
+% 设置标题上下间距
+% 参数分别为：左缩进、段前间距、段后间距
+\titlespacing*{\section}{0pt}{1em}{0em} % section 标题与正文的距离
+\titlespacing*{\subsection}{0pt}{1em}{0pt} % subsection 标题与正文的距离
+\titlespacing*{\subsubsection}{0pt}{1em}{0pt} % subsubsection 标题与正文的距离
+\titlespacing*{\paragraph}{0em}{0em}{1em} % 段落标题与正文的距离
+
+% 设置段落缩进和段间距
+\setlength{\parindent}{0em} % 段首不缩进
+\setlength{\parskip}{1em} % 段落之间增加 0.5em 的间距
+
+\cftsetindents{section}{1em}{2em}
+\cftsetindents{subsection}{2em}{3em}

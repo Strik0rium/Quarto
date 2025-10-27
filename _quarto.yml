@@ -1,0 +1,43 @@
+project:
+  type: book
+
+lang: zh-CN
+
+book:
+  title: "signals-and-systems-web"
+  author: "Norah Jones"
+  date: "10/26/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: ctexbook
+    pdf-engine: xelatex
+    include-in-header:
+      text: |
+        \graphicspath{{tikzplots/png/}}
+
+        \newif\ifaltgeometry   % 定义一个开关
+        % \altgeometryfalse
+        \altgeometrytrue
+
+        \usepackage{xeCJK}
+        \setCJKmainfont{Songti SC}
+        \setCJKsansfont{Heiti SC}
+        \setCJKmonofont{JetBrains Mono}
+        \setmonofont{JetBrains Mono}
+        \input{tex_utils/styles/documentsettings}
+        \input{tex_utils/styles/titlesettings}
+
+
+

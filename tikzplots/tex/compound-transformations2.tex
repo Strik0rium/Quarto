@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes, calc, positioning}
+\usepackage{pgfplots}
+\usepackage{circuitikz}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools, mathrsfs}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{circuitikz}[scale=0.7]
+    \draw (0, 0) node[left] {$\mathbf{x}$} to[twoport, t=$\mathscr{AB}$] (4, 0) node[right] {$(\mathscr{A}\mathscr{B})[\mathbf{x}]$};
+\end{circuitikz}
+\end{document}

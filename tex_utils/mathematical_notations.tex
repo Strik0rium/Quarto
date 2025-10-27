@@ -1,0 +1,145 @@
+\section*{数学符号}
+
+本书采用的数学符号与 \LaTeX 标准库与 \lstinline|amsmath| 包中定义的数学函数基本一致.
+
+\subsection*{逻辑符号}
+
+\begin{itemize}
+    \item $\forall$ 表示{\kaishu 对于任意的}.
+    \item $\exists$ 表示{\kaishu 存在}.
+    \item $\exists !$ 表示{\kaishu 存在唯一的}.
+    \item $p$, $\bar p = \lnot p$ 表示命题 $p$ 及其否定 $\lnot p$,
+    或者布尔变量 $p$ 及其布尔补 $\bar p$,
+    它们是命题逻辑表达式 (布尔代数表达式) 中的{\bfseries 字面量} (literal).
+    在下文中, 我们通常不加以区分布尔变量和命题.
+    \item $pq$ 表示布尔变量 $p$ 与 $q$ 的{\bfseries 合取},
+    $p+q$ 表示布尔变量 $p$ 与 $q$ 的{\bfseries 析取}.
+    \item $p \to q$ 表示命题 $p$ {\bfseries 蕴含} (implies) $q$.
+    \item $p \leftrightarrow q$ 表示 $p$ 与 $q$ {\kaishu 具有相同的真值}.
+    在分析学中, 为了避免与极限趋近 $x \to x_0$ 混淆,
+    蕴含记作 $p \Rightarrow q$,
+    具有相同的真值记作 $p \Leftrightarrow q$.
+\end{itemize}
+
+\subsection*{集合}
+
+\begin{itemize}
+    \item 大写字母 $A, B, C$ 表示集合.
+    \item 小写字母 $a, b, c$ 表示集合中的元素.
+    \item $\varnothing$ 表示空集.
+    \item $\Omega$ 表示论域或者样本空间.
+    \item $\mathcal{P}(\Omega)$ 表示集合 $\Omega$ 的幂集.
+    \item $|A|$ 表示集合 $A$ 的阶, 即 $A$ 中元素的个数.
+\end{itemize}
+
+\subsection*{常数}
+
+
+
+\begin{itemize}
+    \item $1$, T 和 \lstinline|true| 表示逻辑真, 或者算术中的数字 $1$.
+    \item $0$, F 和 \lstinline|false| 表示逻辑假, 或者算术中的数字 $0$.
+    \item $\mathrm{i}$ 表示虚单位, 它满足 $\mathrm{i}^2 = -1$, 在工程学中记作 $\mathrm{j}$. 由于本书中含有较多的来自工程学问题的案例, 因此我们统一使用 $\mathrm{j}$ 表示虚数单位.
+    \item $\pi$ 表示圆周率.
+    \item $\mathrm{e} := \lim_{n \to \infty} \left[ 1 + \dfrac{1}{n} \right]^n$.
+    \item $\ivec, \jvec, \kvec$ 分别表示 $x, y, z$ 坐标向量
+    $[1, 0, 0]^\mathrm{T}$, $[0, 1, 0]^\mathrm{T}$ 和 $[0, 0, 1]^\mathrm{T}$.
+\end{itemize}
+
+\subsection*{标准数学函数}
+
+
+
+\begin{itemize}
+    \item $\sin$, $\cos$, $\tan$, $\cot$, $\sec$, $\csc$ 表示三角函数.
+    \item $\arcsin$, $\arccos$, $\arctan$ 表示反三角函数.
+    \item $\sinh$, $\cosh$ 表示双曲函数.
+    \item $\exp(x)$ 表示指数函数 $\mathrm{e}^{x}$, 这在指数部分较为复杂时
+    具有更好的视觉效果, 例如 $\exp\left[ 1 + \dfrac{1}{x} \right]$,
+    或者 $\exp(u \mathrm{e}^v) = \mathrm{e}^{u\mathrm{e}^v}$.
+    \item $\log$, $\ln$, $\lg$ 表示对数函数.
+    \item $\lim$ 表示极限.
+    \item $\ker$ 表示映射的核或者矩阵的零空间.
+    \item $\min$ 表示最小值, $\max$ 表示最大值.
+    \item $\inf$ 表示下确界, $\sup$ 表示上确界.
+    \item $\liminf$ 表示下极限, $\limsup$ 表示上极限.
+    \item $\deg$ 表示图中节点的度, 以及多项式的次数.
+    其中, $\deg^-(v)$ 表示节点的入度, 即以节点 $v$ 为终点的边的个数,
+    $\deg^+(v)$ 为节点的出度, 即以节点 $v$ 为起点的边的个数.
+    \item $\det$ 表示方阵的行列式.
+    \item $\rank$ 表示矩阵的秩.
+    \item $\dim$ 表示线性空间的维度.
+    \item $\Pr(A)$ 表示随机事件 $A$ 发生的概率.
+    \item $\hom(\mathcal{U}, \mathcal{W})$ 表示线性空间 $\mathcal{U}$ 到
+    $\mathcal{V}$ 的所有线性映射组成的集合.
+    \item $\arg$ 表示参数或者复数的幅角. 例如, $\argmin_{x \in X} f(x)$ 是 $X$ 中使目标函数取最小值
+    的参数 $x$, $\arg z$ 是复数 $z$ 的幅角.
+    \item $\Res_{z = z_0} f(z)$ 表示复变函数 $f(z)$ 
+    在极点 $z = z_0$ 处的留数.
+    \item $\floor{x}$ 表示不大于 $x$ 的最大整数.
+    \item $\ceil{x}$ 表示不小于 $x$ 的最小整数.
+    \item $\round{x}$ 表示 $x$ 四舍五入到整数的结果.
+    \item $\sinc t$ 遵从 IEEE 和 ISO 80000-2:2019 的标准, 定义为 $\sinc t = \dfrac{\sin \pi t}{\pi t}$, 同时定义 $\sinc 0 = 1$.
+\end{itemize}
+
+\subsection*{关系}
+
+\begin{itemize}
+    \item $=$ 表示相等.
+    \item $:=$ 表示定义, 即 $a := b$. 表示 “{\kaishu $a$ 据定义等于 $b$}”.
+    \item $\equiv$ 表示等价或者恒等. 在某个区间 $[a, b]$ 内,
+    $f(x) \equiv g(x)$ 事实上说明 $\forall x \in [a, b] \left(
+        f(x) = g(x)
+    \right)$.
+    \item $\preceq$ 用来表示一般的偏序关系.
+    \item $\sim$ 用来表示一般的等价关系.
+    \item $\bar a$ 表示在等价关系 $\sim$ 下, 由元素 $a$ 确定的等价类.
+\end{itemize}
+
+\subsection*{可迭代对象、求和与连乘}
+
+
+\begin{itemize}
+    \item $1..n$ 表示一个可迭代对象, $k = 1..n$ 就是让 $k$ 遍历
+    $1$ 到 $k$ 的所有整数, 如果是可列无穷多个, 则记作 $1..*$.
+    这种记法在 Swift 和 Kotlin 这样的高级程序设计语言当中是常见的.
+    \item 我们把 $\sum_{i=1}^n$ 也记作 $\sum_{i=1..n}$,
+    这样的话我在打字的时候会更省力一些.
+\end{itemize}
+
+\subsection*{向量空间与矩阵}
+
+
+
+\begin{itemize}
+    \item $\mathbb{F}^m$ 表示 $m$ 维向量空间, 它的元素是 $\mathbb{F}$ 中的 
+    $m$ 个元素构成的 $m$ 元有序数组.
+    \item $\mathrm{M}_{m \times n}(\mathbb{F}) = \mathbb{F}^{m \times n}$
+    表示域 $\mathbb{F}$ 上的 $m \times n$ 矩阵全体.
+    \item $\mathrm{M}_n(\mathbb{F}) = \mathbb{F}^{n \times n}$ 
+    表示域 $\mathbb{F}$ 上的 $n$ 级矩阵全体.
+    \item $\mathrm{GL}_n(\mathbb{F})$ 表示域 $\mathbb{F}$ 上的 $n$ 级可逆矩阵的全体,
+    我们也把这个集合称为{\bfseries 一般线性群} (general linear group).
+    \item $\mathcal{V}$ 表示 $\mathbb{F}$-线性空间.
+    \item $(u, v)$ 或者 $u \cdot v$ 表示 $u$ 与 $v$ 的内积.
+    \item $\|v\|$ 表示 $v$ 的范数.
+    \item $\dist_X(u, v)$ 或者 $d_X(u, v)$ 
+    表示度量空间 $X$ 中 $u$ 与 $v$ 的距离.
+    \item $\mathbf{A}$ 表示矩阵.
+    \item $\vec{v}$ 表示向量.
+    \item $a_{ij}$ 和 $\mathbf{A}[i; j]$ 表示矩阵中的元素.
+\end{itemize}
+
+\subsection*{信号与系统}
+
+\begin{itemize}
+    \item $r_\zi$ 表示系统的零输入响应.
+    \item $r_\zs$ 表示系统的零状态响应.
+    \item $u(t)$ 表示单位阶跃函数, $u[n]$ 表示单位阶跃序列.
+    \item $\delta(t)$ 表示单位冲激函数, $\delta[n]$ 表示单位冲激序列.
+    \item $h(t)$ 表示系统的冲激响应, $h[n]$ 表示系统的冲激响应序列.
+    \item $y(t) = h(t) * x(t)$ 表示系统的卷积, $y[n] = h[n] * x[n]$ 表示系统的卷积序列.
+    \item 信号 $x(t)$ 的 Fourier 变换记作 $X(\jm\omega)$, Laplace 变换记作 $X(s)$, 其中 $s = \sigma + \jm\omega$ 是复数.
+    \item 信号 $x[n]$ 的 $z$-变换记作 $X(z)$, 其中 $z = r\mathrm{e}^{\jm\omega}$ 是复数.
+    \item 线性时不变系统 $H$ 的传递函数 (系统函数) 记作 $H(\jm\omega)$ 或者 $H(s)$.
+\end{itemize}
