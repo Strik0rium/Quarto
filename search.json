@@ -1,0 +1,162 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "基于 Quarto 的 LaTeX 工作流优化",
+    "section": "",
+    "text": "前言",
+    "crumbs": [
+      "前言"
+    ]
+  },
+  {
+    "objectID": "index.html#关于本书",
+    "href": "index.html#关于本书",
+    "title": "基于 Quarto 的 LaTeX 工作流优化",
+    "section": "关于本书",
+    "text": "关于本书\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "前言"
+    ]
+  },
+  {
+    "objectID": "index.html#主要任务",
+    "href": "index.html#主要任务",
+    "title": "基于 Quarto 的 LaTeX 工作流优化",
+    "section": "主要任务",
+    "text": "主要任务\nMarkdown 作为一种轻量级的标记语言，在日常的文档编辑中被广泛使用。然而，Markdown 的功能有些 “简陋”，并不能满足学术文档、技术文档的较复杂的排版需求。\nLaTeX 作为一种专业的排版系统，在学术文档、技术文档的排版中被广泛使用。然而，LaTeX 的语法较为复杂，学习成本较高，对于初学者来说并不友好，即使熟练使用，也会花费大量的时间，效率不高。\nQuarto 是 Markdown 的诸多扩展之一，在保持 Markdown 的简洁、易用的基础上，提供了丰富的功能以满足学术文档、技术文档的排版需求。本项目的工作就是把我们之前基于 LaTeX 的文档内容无缝地迁移到 Quarto 上来，从而实现一份源代码，各种输出格式的高效内容编辑工作流。\n\n\n\n\n\n\n注记成果展示\n\n\n\n最近在看 Cohen (2022) ，全当是对线性代数做一个偏应用的复习了。复习过程中所做的一些记录（当然是融合了以前的偏理论的内容）可以在 https://strik0rium.github.io/linear-algebra-web/ 中查看。",
+    "crumbs": [
+      "前言"
+    ]
+  },
+  {
+    "objectID": "index.html#目标读者-前置知识储备",
+    "href": "index.html#目标读者-前置知识储备",
+    "title": "基于 Quarto 的 LaTeX 工作流优化",
+    "section": "目标读者 & 前置知识储备",
+    "text": "目标读者 & 前置知识储备\n本书不适合在日常写作中不涉及大量公式、或更偏向于 Markdown 特性的读者，也不适合主要使用 LaTeX 且无需 Markdown 特性的用户，或者仅有 PDF 生成需求、没有 HTML 等格式输出和内容分发需求的人群，以及已经使用 Docusaurus 等其他基于 Markdown 的文档工具的读者。\n本书适合已经具备一定 Markdown 和 LaTeX 基础，并且希望结合两者优势、提升写作效率的读者。需要使用 LaTeX 的读者，通常会在日常写作中涉及大量公式排版、TikZ 绘图，并希望通过各类 LaTeX 环境来对文档结构进行更灵活的划分。而对 Markdown 有需求的读者，则更希望凭借其简洁的语法，实现高效的图文混排、列表编辑1、代码块编辑，并用 callout 特性生成醒目的提示信息等内容。\n\n需要对Markdown 有一定的了解，熟悉Markdown 的语法，能够使用Markdown 编写文档。\n需要读者完成 LaTeX 的环境配置，但这并不是必须的。没有完成 LaTeX 配置的读者可以参考 Quarto 的官方文档完成配置。",
+    "crumbs": [
+      "前言"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "基于 Quarto 的 LaTeX 工作流优化",
+    "section": "",
+    "text": "这里的列表指的是无序列表和有序列表↩︎",
+    "crumbs": [
+      "前言"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  环境配置",
+    "section": "",
+    "text": "访问 https://quarto.org/docs/get-started/，点击 Download Quarto CLI 按钮下载 Quarto 的命令行工具，浏览器会自动下载适合你的操作系统的安装包1。接下来，在该网站的 Step 2 中选择你喜欢的工具，我们这里使用 VS Code (Cursor) 作为编辑器。\n下载到 Quarto CLI 的安装包后，根据你的操作系统上的安装导引完成安装。安装完成后，打开终端，输入 quarto --version 命令，如果显示 Quarto 的版本信息，则说明安装成功。\n接下来，打开 VS Code，在插件市场中搜索 Quarto 插件，安装后重启 VS Code 即可。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>环境配置</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#footnotes",
+    "href": "intro.html#footnotes",
+    "title": "1  环境配置",
+    "section": "",
+    "text": "如果你不放心的话，也可以在下面的表格里手动选择安装包。↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>环境配置</span>"
+    ]
+  },
+  {
+    "objectID": "project-initiation-and-structure.html",
+    "href": "project-initiation-and-structure.html",
+    "title": "2  项目初始化与项目结构",
+    "section": "",
+    "text": "在上一节中，我们完成了 Quarto 的安装与配置。接下来，我们将开始创建我们的项目。在 VS Code 中，调用命令面板，快捷键是 Cmd Shift K1。在命令面板中，输入 Quarto: New Project 命令，选择项目模板和项目路径，我们这里选择 Book 模板。\n新建项目以后，我们可以看到 Quarto 为我们生成了一个项目的基本结构：\n在 VS Code 的顶部菜单栏选择 Terminal &gt; New Terminal 打开终端（快捷键是 Control Shift `），执行以下命令以预览项目：",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>项目初始化与项目结构</span>"
+    ]
+  },
+  {
+    "objectID": "project-initiation-and-structure.html#footnotes",
+    "href": "project-initiation-and-structure.html#footnotes",
+    "title": "2  项目初始化与项目结构",
+    "section": "",
+    "text": "对于 Windows 用户，快捷键是 Ctrl Shift P。↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>项目初始化与项目结构</span>"
+    ]
+  },
+  {
+    "objectID": "tikz-related-settings.html",
+    "href": "tikz-related-settings.html",
+    "title": "4  TikZ 相关设置",
+    "section": "",
+    "text": "4.1 准备工作\nTikZ 是一种强大的绘图工具，可以用于绘制各种复杂的图形，在我的 LaTeX 文档中有大量的图表都是由 TikZ 绘制的。但是对 TikZ 的支持是我在工作流迁移中的最大难点。\n在项目的根目录新建一个名为 tikzplots 的目录和三个子目录，其中 tex/ 目录用于存放 TikZ 代码，pdf/ 目录用于存放 PDF 文件，png/ 目录用于存放 PNG 文件。",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>TikZ 相关设置</span>"
+    ]
+  },
+  {
+    "objectID": "tikz-related-settings.html#准备工作",
+    "href": "tikz-related-settings.html#准备工作",
+    "title": "4  TikZ 相关设置",
+    "section": "",
+    "text": "tikzplots/\n  tex/\n  pdf/\n  png/",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>TikZ 相关设置</span>"
+    ]
+  },
+  {
+    "objectID": "tikz-related-settings.html#工作流",
+    "href": "tikz-related-settings.html#工作流",
+    "title": "4  TikZ 相关设置",
+    "section": "4.2 工作流",
+    "text": "4.2 工作流\n在 tikzplots/tex/ 目录下新建一个名为 your_filename.tex 的文件，并输入你的 TikZ 代码。建议选择 standalone 文档类，并进行绘图代码的编写。编写完成后，在终端中执行以下命令以编译 TikZ 代码，并将其转换为 PNG 图像，最后将 PDF 文件和 PNG 图像移动到 tikzplots/pdf/ 和 tikzplots/png/ 目录中。\ncd tikzplots/tex\npdflatex -interaction=nonstopmode your_filename.tex\nsips -s format png -Z 1200 your_filename.pdf --out ../png/your_filename.png\nmv your_filename.pdf ../pdf/\nrm -f your_filename.aux your_filename.log your_filename.out\n\n\n\n\n\n\n注记格式转换工具的选择\n\n\n\n在上述命令中，我们使用了 sips 命令来转换 PDF 文件为 PNG 图像。sips 是 macOS 自带的格式转换工具，也可以使用其他工具。\n\n\n\n\n\n\n\n\n提示最佳实践\n\n\n\n你可以根据你选用的工具和具体的执行方案，编写一个 shell 脚本来自动化你的工作流，你的 AI 助手会很乐意帮你完成这项工作。",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>TikZ 相关设置</span>"
+    ]
+  },
+  {
+    "objectID": "tikz-related-settings.html#完整示例演示",
+    "href": "tikz-related-settings.html#完整示例演示",
+    "title": "4  TikZ 相关设置",
+    "section": "4.3 完整示例演示",
+    "text": "4.3 完整示例演示\n首先创建几个相关的目录：\n$ mkdir tikzplots\n$ cd tikzplots \n$ mkdir -p tex pdf png\n接下来，在 tikzplots/tex/rlc-circuit.tex 文件中输入以下代码：\n\\documentclass{standalone}\n\\usepackage{tikz}\n\\usetikzlibrary{arrows, shapes, calc, positioning}\n\\usepackage{pgfplots}\n\\usepackage{circuitikz}\n\\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools, mathrsfs}\n\\pgfplotsset{compat=1.18}\n\n\\begin{document}\n\\begin{circuitikz}[scale=0.7]\n    \\draw (0, 0) to[vsource=$v_\\text{s}(t)$] (0, 3) \n        to[R=1&lt;ohm&gt;] (4, 3)\n        to[L=1&lt;henry&gt;] (4, 0)\n        to[C=1&lt;farad&gt;] (0, 0);\n\\end{circuitikz}\n\\end{document}\n然后执行这些命令编译 TikZ 代码，并将其转换为 PNG 图像，最后将 PDF 文件和 PNG 图像移动到 tikzplots/pdf/ 和 tikzplots/png/ 目录中：\n$ cd tex\n$ pdflatex -interaction=nonstopmode rlc-circuit.tex \nThis is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)\n...\nOutput written on rlc-circuit.pdf (1 page, 31309 bytes).\nTranscript written on rlc-circuit.log.\n$ sips -s format png -Z 1200 rlc-circuit.pdf --out ../png/rlc-circuit.png\n$ mv rlc-circuit.pdf ../pdf/  \n$ rm -f rlc-circuit.aux rlc-circuit.log rlc-circuit.out\n\n\n\n上述命令行命令的执行效果\n\n\n接下来在项目正文中插入新生成的 PNG 图像。\n\n\n\n\n\n\n插入 PNG 图像\n\n\n\n\n\n预览效果\n\n\n\n\n图 4.1: 在项目正文中插入新生成的 PNG 图像",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>TikZ 相关设置</span>"
+    ]
+  },
+  {
+    "objectID": "publish.html",
+    "href": "publish.html",
+    "title": "5  把内容发布到 GitHub Pages",
+    "section": "",
+    "text": "新建一个 GitHub 仓库，然后执行\n$ quarto publish gh-pages",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>把内容发布到 GitHub Pages</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "6  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Cohen, M. X. 2022. Practical Linear Algebra for Data Science.\nO’Reilly Media. https://books.google.com.hk/books?id=GHmHEAAAQBAJ.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
