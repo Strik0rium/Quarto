@@ -1,0 +1,6 @@
+# 把内容发布到 GitHub Pages
+
+新建一个 GitHub 仓库，然后执行
+```
+$ quarto publish gh-pages
+```

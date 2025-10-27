@@ -10,5 +10,17 @@
   },
   "references.qmd": {
     "references.html": "d9e2ccb6"
+  },
+  "project-initiation-and-structure.qmd": {
+    "project-initiation-and-structure.html": "62efb463"
+  },
+  "publish.qmd": {
+    "publish.html": "90d7a8e3"
+  },
+  "latex-related-settings.qmd": {
+    "latex-related-settings.html": "4619bcff"
+  },
+  "tikz-related-settings.qmd": {
+    "tikz-related-settings.html": "53626bf2"
   }
 }

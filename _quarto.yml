@@ -2,14 +2,19 @@ project:
   type: book
 
 lang: zh-CN
+callout-appearance: simple
 
 book:
-  title: "signals-and-systems-web"
-  author: "Norah Jones"
-  date: "10/26/2025"
+  title: "基于 Quarto 的 LaTeX 工作流优化"
+  author: "Strik0r"
+  date: "10/27/2025"
   chapters:
     - index.qmd
     - intro.qmd
+    - project-initiation-and-structure.qmd
+    - latex-related-settings.qmd
+    - tikz-related-settings.qmd
+    - publish.qmd
     - summary.qmd
     - references.qmd
 
@@ -17,9 +22,17 @@ bibliography: references.bib
 
 format:
   html:
+    # include-in-header:
+    #   text: |
+    #     <script>
+    #     window.MathJax = {
+    #       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    #       chtml: { scale: 0.8 }  // 1.0 = 100%, adjust as you wish
+    #     };
+    #     </script>
     theme:
-      - cosmo
-      - brand
+      cosmo
+      brand
   pdf:
     documentclass: ctexbook
     pdf-engine: xelatex

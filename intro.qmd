@@ -1,34 +1,17 @@
-# 导言
+# 环境配置
 
-This is a book created from markdown and executable code.
+访问 <https://quarto.org/docs/get-started/>，点击 `Download Quarto CLI` 按钮下载 `Quarto` 的命令行工具，浏览器会自动下载适合你的操作系统的安装包^[如果你不放心的话，也可以在下面的表格里手动选择安装包。]。接下来，在该网站的 Step 2 中选择你喜欢的工具，我们这里使用 VS Code (Cursor) 作为编辑器。
 
-![Compound Transformations](tikzplots/png/compound-transformations2.png){#fig-compound-transformations2 width="45%"}
+![Quarto offcial site > Get Started](pic/Screenshot%202025-10-27%20at%2009.53.23.png){width="100%"}
 
-中文输出测试。
-
-```{python}
-#| label: fig-scaled-versions
-#| fig-cap: "Scaled versions of $[1, 2]^\\mathrm{T}$."
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Create 100 scaled versions of [1, 2]^T
-scales = np.linspace(-4, 4, 100)
-v1 = np.array([1, 2])
-points = np.outer(scales, v1)  # shape (100, 2)
-
-# Extract x and y coordinates
-x = points[:, 0]
-y = points[:, 1]
-
-# Plot
-fig, ax = plt.subplots(figsize=(8, 6))
-ax.scatter(x, y, color='steelblue')
-ax.axhline(0, color='gray', lw=1)
-ax.axvline(0, color='gray', lw=1)
-ax.set_xlabel("x", fontsize=16)
-ax.set_ylabel("y", fontsize=16)
-plt.show()
+下载到 `Quarto CLI` 的安装包后，根据你的操作系统上的安装导引完成安装。安装完成后，打开终端，输入 `quarto --version` 命令，如果显示 `Quarto` 的版本信息，则说明安装成功。
+```zsh
+$ quarto --version
+1.8.25
 ```
 
-See @knuth84 for additional discussion of literate programming.
+![成功安装 Quarto CLI](pic/Screenshot%202025-10-27%20at%2009.57.48.png){width="80%"}
+
+接下来，打开 VS Code，在插件市场中搜索 Quarto 插件，安装后重启 VS Code 即可。
+
+![插件市场 > Quarto](pic/Screenshot%202025-10-27%20at%2010.00.11.png){width="100%"}

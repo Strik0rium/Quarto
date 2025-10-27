@@ -1,0 +1,39 @@
+# 项目初始化与项目结构
+
+在上一节中，我们完成了 `Quarto` 的安装与配置。接下来，我们将开始创建我们的项目。在 VS Code 中，调用命令面板，快捷键是 `Cmd Shift K`^[对于 Windows 用户，快捷键是 `Ctrl Shift P`。]。在命令面板中，输入 `Quarto: New Project` 命令，选择项目模板和项目路径，我们这里选择 `Book` 模板。
+
+![命令面板 > New Project](pic/Screenshot%202025-10-27%20at%2010.05.02.png){width="100%"}
+
+::: {.callout-tip appearance="simple" title="最佳实践"}
+本人建议在操作系统的 `Home` 目录中新建一个名为 `CodeProjects` 的目录用于存放所有代码相关的项目。只要妥善管理这个文件夹和 Git 远程仓库，就不会有代码丢失。 **千万不要选择基于复制粘贴的版本控制**。
+:::
+
+::: {.callout-warning appearance="simple" title="关于最佳实践的警告"}
+在技术领域，所谓的完美主义会化身为对最佳实践的过度追求，这将会浪费你大量的时间！所以当你看到类似 “最佳实践” 的字眼时，请首先判断一下：_它适合我吗？它对我有帮助吗？我这样实践所产生的收益，是大于还是小于等于我为此付出的时间成本？_
+:::
+
+新建项目以后，我们可以看到 `Quarto` 为我们生成了一个项目的基本结构：
+```
+_quarto.yml
+cover.png
+index.qmd
+intro.qmd
+references.bib
+references.qmd
+summary.qmd
+```
+
+![项目结构](pic/Screenshot%202025-10-27%20at%2010.21.35.png){width="100%"}
+
+- `_quarto.yml` 是 `Quarto` 的配置文件，我们的大多数项目配置都在这个文件中进行，对编辑 `_quarto.yml` 的学习是本项目的重点。
+- `cover.png` 是封面图片，它实际上只是一个占位符，我想不会有人恶趣味到选择用这个东西作为自己的书籍的封面。
+- `index.qmd` 是书籍的首页，首页中应该包含前言、关于本书、致谢等内容。
+- 文件名为 `references` 的两个文件是与参考文献有关的。`references.bib` 是参考文献的 BibTeX 文件，用于生成参考文献列表；`references.qmd` 是参考文献的列表页，用于生成参考文献列表。
+- 剩余的 `intro.qmd` 和 `summary.qmd` 是项目初始化中生成的两个示例章节。
+
+在 VS Code 的顶部菜单栏选择 `Terminal > New Terminal` 打开终端（快捷键是 `` Control Shift ` ``），执行以下命令以预览项目：
+```zsh
+$ quarto preview
+```
+
+![预览项目](pic/Screenshot%202025-10-27%20at%2011.24.44.png){width="100%"}

@@ -1,0 +1,99 @@
+# TikZ 相关设置
+
+`TikZ` 是一种强大的绘图工具，可以用于绘制各种复杂的图形，在我的 `LaTeX` 文档中有大量的图表都是由 `TikZ` 绘制的。但是对 `TikZ` 的支持是我在工作流迁移中的最大难点。
+
+::: {.callout-warning title="本方案的缺点与不足"}
+我尝试了所有能匹配 `TikZ` 关键词的 `Quarto` 扩展，包括 `diagram`、`imagify` 和 `tikz`，也查阅了 Stack Overflow 上的有关讨论，但是这些方案都不能成功就地编译 `TikZ` 代码并将绘图结果作为图像输出。并且这些项目的 GitHub 仓库都已经有十几个月没有更新了，也许是烂尾了？再经过长达 12 个小时的爆肝之后，我于 2025 年 10 月 26 日凌晨 3 点放弃了这看起来有些不切实际的尝试。
+
+![Quarto 扩展搜索结果](pic/Screenshot%202025-10-27%20at%2011.13.42.png){width="100%"}
+
+我们的方案采用的是一种比较 “笨” 的方法，即：将 `TikZ` 代码编译为 `PDF` 文件，然后将其转换为 `PNG` 图像，最后将 `PNG` 图像插入到 `Quarto` 文档中。这也算是一种无奈之举了。
+:::
+
+::: {.callout-important title="悬而未决的问题"}
+如果你有办法解决这个问题，请通过 <strik0rium@gmail.com> 联系我！
+:::
+
+## 准备工作
+
+在项目的根目录新建一个名为 `tikzplots` 的目录和三个子目录，其中 `tex/` 目录用于存放 `TikZ` 代码，`pdf/` 目录用于存放 `PDF` 文件，`png/` 目录用于存放 `PNG` 文件。
+```
+tikzplots/
+  tex/
+  pdf/
+  png/
+```
+
+## 工作流
+
+在 `tikzplots/tex/` 目录下新建一个名为 `your_filename.tex` 的文件，并输入你的 `TikZ` 代码。建议选择 `standalone` 文档类，并进行绘图代码的编写。编写完成后，在终端中执行以下命令以编译 `TikZ` 代码，并将其转换为 `PNG` 图像，最后将 `PDF` 文件和 `PNG` 图像移动到 `tikzplots/pdf/` 和 `tikzplots/png/` 目录中。
+```zsh
+cd tikzplots/tex
+pdflatex -interaction=nonstopmode your_filename.tex
+sips -s format png -Z 1200 your_filename.pdf --out ../png/your_filename.png
+mv your_filename.pdf ../pdf/
+rm -f your_filename.aux your_filename.log your_filename.out
+```
+
+::: {.callout-note title="格式转换工具的选择"}
+在上述命令中，我们使用了 `sips` 命令来转换 `PDF` 文件为 `PNG` 图像。`sips` 是 macOS 自带的格式转换工具，也可以使用其他工具。
+::: 
+
+::: {.callout-tip title="最佳实践"}
+你可以根据你选用的工具和具体的执行方案，编写一个 `shell` 脚本来自动化你的工作流，你的 AI 助手会很乐意帮你完成这项工作。
+:::
+
+## 完整示例演示
+
+首先创建几个相关的目录：
+```zsh
+$ mkdir tikzplots
+$ cd tikzplots 
+$ mkdir -p tex pdf png
+```
+
+接下来，在 `tikzplots/tex/rlc-circuit.tex` 文件中输入以下代码：
+```tex
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes, calc, positioning}
+\usepackage{pgfplots}
+\usepackage{circuitikz}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, mathtools, mathrsfs}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{circuitikz}[scale=0.7]
+    \draw (0, 0) to[vsource=$v_\text{s}(t)$] (0, 3) 
+        to[R=1<ohm>] (4, 3)
+        to[L=1<henry>] (4, 0)
+        to[C=1<farad>] (0, 0);
+\end{circuitikz}
+\end{document}
+```
+
+然后执行这些命令编译 `TikZ` 代码，并将其转换为 `PNG` 图像，最后将 `PDF` 文件和 `PNG` 图像移动到 `tikzplots/pdf/` 和 `tikzplots/png/` 目录中：
+```zsh
+$ cd tex
+$ pdflatex -interaction=nonstopmode rlc-circuit.tex 
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)
+...
+Output written on rlc-circuit.pdf (1 page, 31309 bytes).
+Transcript written on rlc-circuit.log.
+$ sips -s format png -Z 1200 rlc-circuit.pdf --out ../png/rlc-circuit.png
+$ mv rlc-circuit.pdf ../pdf/  
+$ rm -f rlc-circuit.aux rlc-circuit.log rlc-circuit.out
+```
+
+![上述命令行命令的执行效果](pic/Screenshot%202025-10-27%20at%2011.59.35.png){width="50%"}
+
+接下来在项目正文中插入新生成的 PNG 图像。
+
+:::{#fig-rlc-circuit}
+
+![插入 PNG 图像](pic/Screenshot%202025-10-27%20at%2012.13.24.png){width="100%"}
+
+![预览效果](pic/Screenshot%202025-10-27%20at%2012.14.04.png){width="100%"}
+
+在项目正文中插入新生成的 PNG 图像
+:::
