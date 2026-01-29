@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./tikz-related-settings.html" rel="next">
+<link href="./theme.html" rel="next">
 <link href="./markdown-basic.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -343,7 +343,7 @@ window.MathJax = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./init-project.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">项目初始化与项目结构</span></a>
+  <a href="./project-init.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">项目初始化与项目结构</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -358,22 +358,7 @@ window.MathJax = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tikz-related-settings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">TikZ 相关设置</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./theme.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">HTML 输出主题</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./mermaid.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Mermaid 基础</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./publish.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">内容渲染与分发</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -423,18 +408,29 @@ window.MathJax = {
 </header>
 
 
-<p>本章节详细介绍了本项目中的 <code>LaTeX</code> 相关配置，包括 PDF 输出格式设置、文档类配置、页面布局、字体设置以及各种宏包的使用。这些设置确保了生成的 PDF 文档具有专业的外观和良好的排版效果。</p>
+<p>本章节详细介绍了本项目中的 LaTeX 相关配置，包括 PDF 输出格式设置、文档类配置、页面布局、字体设置以及各种宏包的使用。这些设置确保了生成的 PDF 文档具有专业的外观和良好的排版效果。</p>
 <section id="pdf-输出格式配置" class="level2">
 <h2 class="anchored" data-anchor-id="pdf-输出格式配置">PDF 输出格式配置</h2>
-<p>在 Quarto 项目的 <code>_quarto.yml</code> 配置文件中，通过 <code>pdf</code> 相关设置可以灵活地指定 PDF 输出的排版样式、文档类、页面尺寸和各种格式参数，从而实现专业而定制化的排版效果。</p>
-<p>本项目使用 <code>ctexbook</code> 作为 PDF 输出的文档类，这是专门为中文文档设计的 <code>LaTeX</code> 文档类：</p>
+<p>在 Quarto 项目的 _quarto.yml 配置文件中，通过 pdf 相关设置可以灵活地指定 PDF 输出的排版样式、文档类、页面尺寸和各种格式参数，从而实现专业而定制化的排版效果。</p>
+<p>本项目使用 <code>ctexbook</code> 作为 PDF 输出的文档类，这是专门为中文文档设计的 LaTeX 文档类：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">documentclass</span><span class="kw">:</span><span class="at"> ctexbook</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fontsize</span><span class="kw">:</span><span class="at"> 10pt</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">pdf-engine</span><span class="kw">:</span><span class="at"> xelatex</span></span></code></pre></div><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>ctexbook</code> 是专门为中文文档设计的 <code>LaTeX</code> 文档类，支持中文排版，自动处理中文字体、标点符号等。</p>
-<p><code>fontsize: 10pt</code> 设置基础字体大小为 10 点，适合学术文档阅读。</p>
-<p><code>xelatex</code> 使用 <code>xelatex</code> 作为 PDF 生成引擎，<code>xelatex</code> 对 Unicode 和现代字体支持更好，特别适合处理中文字符和自定义字体。</p>
+<dl>
+<dt><code>ctexbook</code></dt>
+<dd>
+专门为中文文档设计的 LaTeX 文档类，支持中文排版，自动处理中文字体、标点符号等。
+</dd>
+<dt><code>fontsize: 10pt</code></dt>
+<dd>
+设置基础字体大小为 10 点，适合学术文档阅读。
+</dd>
+<dt><code>xelatex</code></dt>
+<dd>
+使用 <code>xelatex</code> 作为 PDF 生成引擎，<code>xelatex</code> 对 Unicode 和现代字体支持更好，特别适合处理中文字符和自定义字体。
+</dd>
+</dl>
 </section>
 <section id="页面布局设置" class="level2">
 <h2 class="anchored" data-anchor-id="页面布局设置">页面布局设置</h2>
@@ -455,7 +451,7 @@ window.MathJax = {
 </section>
 <section id="字体配置" class="level2">
 <h2 class="anchored" data-anchor-id="字体配置">字体配置</h2>
-<p>在 <code>_quarto.yml</code> 文件的 <code>pdf</code> 配置中，<code>include-in-header</code> 用于向生成的 <code>LaTeX</code> 文档头部插入自定义的 <code>LaTeX</code> 代码片段。这些代码会在每次编译 PDF 时自动插入到 <code>LaTeX</code> 源文件的 <code>\begin{document}</code> 之前，常用于字体设置、引入额外的宏包、定义自定义命令或调整全局排版风格等。例如可以用它为整个文档设定等宽字体、插入自定义标题样式、统一公式渲染模式等配置。从而更灵活地微调最终输出文档的外观与功能。</p>
+<p>在 _quarto.yml 文件的 pdf 配置中，<code>include-in-header</code> 用于向生成的 LaTeX 文档头部插入自定义的 LaTeX 代码片段。这些代码会在每次编译 PDF 时自动插入到 LaTeX 源文件的 <code>\begin{document}</code> 之前，常用于字体设置、引入额外的宏包、定义自定义命令或调整全局排版风格等。例如可以用它为整个文档设定等宽字体、插入自定义标题样式、统一公式渲染模式等配置。从而更灵活地微调最终输出文档的外观与功能。</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">include-in-header</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">  text</span><span class="kw">: </span><span class="ch">|</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    \setmonofont{JetBrains Mono}</span></code></pre></div><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></div>
@@ -979,8 +975,8 @@ pdf:
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./tikz-related-settings.html" class="pagination-link" aria-label="TikZ 相关设置">
-        <span class="nav-page-text"><span class="chapter-title">TikZ 相关设置</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./theme.html" class="pagination-link" aria-label="HTML 输出主题">
+        <span class="nav-page-text"><span class="chapter-title">HTML 输出主题</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
