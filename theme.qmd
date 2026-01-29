@@ -1,0 +1,23 @@
+# 文档主题
+
+## 设置文档字体
+
+文档字体需要通过 `css` 文件来设置。
+
+```css
+/* custom.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: "Roboto", "Noto Sans", "Noto Sans SC", sans-serif;
+}
+
+code, pre {
+  font-family: "JetBrains Mono", monospace !important;
+}
+```
+
+在进行 HTML 渲染时，待渲染的字符会逐级向下地从 `font-family` 列表中查找字体。上述代码将文档的英文字体设置为 `Roboto`，由于中文字符并不包含在 `Roboto` 中，汉字会向下查找到 `Noto Sans SC`。

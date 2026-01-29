@@ -3,54 +3,67 @@ project:
 
 lang: zh-CN
 callout-appearance: simple
+bibliography: references.bib
+number-sections: false
 
 book:
-  title: "基于 Quarto 的 LaTeX 工作流优化"
+  title: "使用 Quarto 编写学术和技术文档"
   author: "Strik0r"
   date: "10/27/2025"
   chapters:
     - index.qmd
     - intro.qmd
-    - project-initiation-and-structure.qmd
+    - init-project.qmd
+    - markdown-basic.qmd
     - latex-related-settings.qmd
     - tikz-related-settings.qmd
+    - theme.qmd
+    - mermaid.qmd
     - publish.qmd
-    - summary.qmd
+    # - summary.qmd
     - references.qmd
 
-bibliography: references.bib
+
 
 format:
   html:
-    # include-in-header:
-    #   text: |
-    #     <script>
-    #     window.MathJax = {
-    #       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-    #       chtml: { scale: 0.8 }  // 1.0 = 100%, adjust as you wish
-    #     };
-    #     </script>
-    theme:
-      cosmo
-      brand
-  pdf:
-    documentclass: ctexbook
-    pdf-engine: xelatex
     include-in-header:
       text: |
-        \graphicspath{{tikzplots/png/}}
-
-        \newif\ifaltgeometry   % 定义一个开关
-        % \altgeometryfalse
-        \altgeometrytrue
-
-        \usepackage{xeCJK}
-        \setCJKmainfont{Songti SC}
-        \setCJKsansfont{Heiti SC}
-        \setCJKmonofont{JetBrains Mono}
-        \setmonofont{JetBrains Mono}
-        \input{tex_utils/styles/documentsettings}
-        \input{tex_utils/styles/titlesettings}
+        <script>
+        window.MathJax = {
+          tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+          chtml: { scale: 0.80 }  // 1.0 = 100%, adjust as you wish
+        };
+        </script>
+    respect-user-color-scheme: true
+    css: format/custom.css
+    theme:
+      light: [cosmo, format/theme.scss]
+      dark: [cosmo, format/theme-dark.scss]
+  # pdf:
+  #   documentclass: ctexbook
+  #   fontsize: 10pt
+  #   # geometry:
+  #   #   - paperwidth=177.8mm
+  #   #   - paperheight=233.4mm
+  #   #   - top=32mm
+  #   #   - bottom=22mm
+  #   #   - left=18mm
+  #   #   - right=18mm
+  #   geometry:
+  #     - paperwidth=210mm
+  #     - paperheight=297mm
+  #     - top=36.8mm
+  #     - bottom=31.8mm
+  #     - left=25.4mm
+  #     - right=25.4mm
+  #   pdf-engine: xelatex
+  #   include-in-header:
+  #     text: |
+  #       \graphicspath{{tikzplots/png/}}        
+  #       \setmonofont{JetBrains Mono}
+  #       \input{tex_utils/styles/documentsettings}
+  #       \input{tex_utils/styles/titlesettings}
 
 
 

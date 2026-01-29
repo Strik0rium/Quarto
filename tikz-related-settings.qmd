@@ -89,7 +89,7 @@ $ rm -f rlc-circuit.aux rlc-circuit.log rlc-circuit.out
 
 接下来在项目正文中插入新生成的 PNG 图像。
 
-:::{#fig-rlc-circuit}
+:::{#fig-rlc-circuit layout-ncol="2"}
 
 ![插入 PNG 图像](pic/Screenshot%202025-10-27%20at%2012.13.24.png){width="100%"}
 

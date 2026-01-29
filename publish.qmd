@@ -1,4 +1,13 @@
-# 把内容发布到 GitHub Pages
+# 内容渲染与分发
+
+## 渲染
+
+使用如下命令渲染内容：
+```
+$ quarto render
+```
+
+## 把内容发布到 GitHub Pages
 
 新建一个 GitHub 仓库，然后执行
 ```

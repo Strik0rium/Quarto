@@ -2,9 +2,7 @@
 
 ## 关于本书
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+This is a Quarto book. To learn more about Quarto books visit <https://quarto.org/docs/books>.
 
 ## 主要任务
 
@@ -25,10 +23,22 @@ To learn more about Quarto books visit <https://quarto.org/docs/books>.
 本书适合已经具备一定 `Markdown` 和 `LaTeX` 基础，并且希望结合两者优势、提升写作效率的读者。需要使用 `LaTeX` 的读者，通常会在日常写作中涉及大量公式排版、`TikZ` 绘图，并希望通过各类 `LaTeX` 环境来对文档结构进行更灵活的划分。而对 `Markdown` 有需求的读者，则更希望凭借其简洁的语法，实现高效的图文混排、列表编辑^[这里的列表指的是无序列表和有序列表]、代码块编辑，并用 `callout` 特性生成醒目的提示信息等内容。
 
 - 需要对`Markdown` 有一定的了解，熟悉`Markdown` 的语法，能够使用`Markdown` 编写文档。
-- 需要读者完成 `LaTeX` 的环境配置，但这并不是必须的。没有完成 `LaTeX` 配置的读者可以参考 `Quarto` 的官方文档完成配置。
+- 需要读者完成 `LaTeX` 的环境配置，但这并不是必须的。没有完成 `LaTeX` 配置的读者可以参考 `Quarto` 的官方文档完成配置。如果你不确定你的 `LaTeX` 环境是否已经配置完成，可以尝试在系统终端中执行如下命令：
+    
+    ```zsh
+    $ pdflatex --version
+    $ xelatex --version
+    $ lualatex --version
+    $ latexmk --version
+    ```
+    如果上述命令都能正确输出版本信息，则说明你的 `LaTeX` 环境已经配置完成。否则，请参考 `Quarto` 的官方文档或者 [这个视频](https://www.bilibili.com/video/BV1xCNfejEMv) 完成配置。
 
-# 致谢
+## 致谢
 
 感谢 @cohen2022practical 的作者，让我从此多了一个给偏 CS、DataSci、AI 和 FinTech 方向的同学推荐线性代数学习资料的选择，拒绝同济线性代数、北大高等代数等诸多防自学教材的理由又多了一个。
 
 感谢 ChatGPT 和 Cursor，他们的编码能力实在是很强，帮我节省了许多工作量（但同时也让我多走了很多弯路）。
+
+## 讲义获取
+
+本系列没有 PDF 版讲义。

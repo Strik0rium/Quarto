@@ -22,5 +22,17 @@
   },
   "tikz-related-settings.qmd": {
     "tikz-related-settings.html": "53626bf2"
+  },
+  "markdown-basic.qmd": {
+    "markdown-basic.html": "186f2bf9"
+  },
+  "mermaid.qmd": {
+    "mermaid.html": "70eb207f"
+  },
+  "init-project.qmd": {
+    "init-project.html": "4214c113"
+  },
+  "theme.qmd": {
+    "theme.html": "67a762f2"
   }
 }
