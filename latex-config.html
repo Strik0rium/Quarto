@@ -300,7 +300,7 @@ window.MathJax = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./latex-related-settings.html"><span class="chapter-title">配置 LaTeX</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./latex-config.html"><span class="chapter-title">配置 LaTeX</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
@@ -353,7 +353,7 @@ window.MathJax = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./latex-related-settings.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">配置 LaTeX</span></a>
+  <a href="./latex-config.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">配置 LaTeX</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -363,7 +363,7 @@ window.MathJax = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./theme.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">文档主题</span></a>
+  <a href="./theme.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">HTML 输出主题</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -500,26 +500,26 @@ pdf:
 </section>
 <section id="自定义符号" class="level2">
 <h2 class="anchored" data-anchor-id="自定义符号">自定义符号</h2>
-<p>在使用 <code>LaTeX</code> 编写文档时，时常会需要自定义一些符号，并在多个文件中使用它们，例如，把 <code>\mathrm{i}</code> 简化为 <code>\im</code>，可以极大提高代码的紧凑程度。在 <code>LaTeX</code> 中，这涉及到两个命令：</p>
+<p>在使用 LaTeX 编写文档时，时常会需要自定义一些符号，并在多个文件中使用它们，例如，把 <code>\mathrm{i}</code> 简化为 <code>\im</code>，可以极大提高代码的紧凑程度。在 LaTeX 中，这涉及到两个命令：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>\newcommand{\im}{\mathrm{i}}</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>\renewcommand{\im}{\mathrm{i}}</span></code></pre></div><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></div>
-<p>其中，第一个命令 <code>\newcommand</code> 用于定义新的命令，第二个命令 <code>\renewcommand</code> 用于重新定义已有的命令。需要注意的是，对已经定义过的命令进行重新定义时，需要使用 <code>\renewcommand</code> 命令，而不是 <code>\newcommand</code> 命令，否则将导致报错。也就是说，对于 <code>LaTeX</code> 代码，我们需要保证<strong>每一个自定义命令只调用一次 <code>\newcommand</code> 命令，所有后续更改都通过 <code>\renewcommand</code> 命令完成</strong>。</p>
-<p>对于纯 <code>LaTeX</code> 项目来说，这两个命令已经足够使用，我们可以在文档的导言区中插入相关自定义命令的代码。后续所有正文章节中需要使用的 <code>LaTeX</code> 命令，都已经在导言区中被一次性导入了。</p>
+<p>其中，第一个命令 <code>\newcommand</code> 用于定义新的命令，第二个命令 <code>\renewcommand</code> 用于重新定义已有的命令。需要注意的是，对已经定义过的命令进行重新定义时，需要使用 <code>\renewcommand</code> 命令，而不是 <code>\newcommand</code> 命令，否则将导致报错。也就是说，对于 LaTeX 代码，我们需要保证<strong>每一个自定义命令只调用一次 <code>\newcommand</code> 命令，所有后续更改都通过 <code>\renewcommand</code> 命令完成</strong>。</p>
+<p>对于纯 LaTeX 项目来说，这两个命令已经足够使用，我们可以在文档的导言区中插入相关自定义命令的代码。后续所有正文章节中需要使用的 LaTeX 命令，都已经在导言区中被一次性导入了。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pic/pure-latex-approach.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>传统 LaTeX 项目中复用自定义命令的方法</figcaption>
 </figure>
 </div>
-<p>然而，在 <code>Quarto</code> 项目中，由于<strong>不同 .qmd 文件之间是相互独立的</strong>，也就是说，对于每一个独立的 .qmd 文件，都需要 “导入” 一次已有的自定义命令代码，否则这些自定义命令不会被 <code>MathJax</code> 识别。因此，如果将自定义命令的配置代码放在 <code>_symbols.qmd</code> 文件中，则每一个需要用到这些命令的文件都需要使用 <code>{{&lt; include _symbols.qmd &gt;}}</code> 命令导入该文件，否则这些自定义命令不会被 <code>MathJax</code> 识别。</p>
+<p>然而，在 <code>Quarto</code> 项目中，由于 MathJax 在 HTML 中是基于页面局部渲染的，不像 LaTeX 编译时拥有全局状态，所以每个页面都必须“看到”宏定义才能正确解析。也就是说，<strong>不同 .qmd 文件之间是相互独立的</strong>，对于每一个独立的 .qmd 文件，都需要 “导入” 一次已有的自定义命令代码，否则这些自定义命令不会被 MathJax 识别。因此，如果将自定义命令的配置代码放在 <code>_symbols.qmd</code> 文件中，则每一个需要用到这些命令的文件都需要使用 <code>{{&lt; include _symbols.qmd &gt;}}</code> 命令导入该文件，否则这些自定义命令不会被 MathJax 识别。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pic/pure-quarto-approach.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>Quarto 项目中复用自定义命令的方法</figcaption>
 </figure>
 </div>
-<p>这就引出了矛盾：对于基于 <code>LaTeX</code> 的 PDF 输出来说，一次导入已经足够；但是对于 HTML 输出来说，第二次及其以后的导入都将对 “已经定义过的命令” 重新调用 <code>\newcommand</code> 命令，从而导致 PDF 输出端报错。也就是说，PDF 输出只需要导入一次，而 HTML 输出需要导入多次。</p>
-<p>解决方案是，我们把针对两种输出的自定义命令代码分开配置，这需要使用 <code>_quarto.yml</code> 文件中的 <code>include-in-header</code> 配置项，以及 <code>Quarto</code> 的 <code>.content-hidden</code> 属性。</p>
+<p>这就引出了矛盾：对于基于 LaTeX 的 PDF 输出来说，一次导入已经足够；但是对于 HTML 输出来说，第二次及其以后的导入都将对 “已经定义过的命令” 重新调用 <code>\newcommand</code> 命令，从而导致 PDF 输出端报错。也就是说，PDF 输出只需要导入一次，而 HTML 输出需要导入多次。</p>
+<p>解决方案是，我们把针对两种输出的自定义命令代码分开配置，这需要使用 _quarto.yml 文件中的 <code>include-in-header</code> 配置项，以及 Quarto 的 <code>.content-hidden</code> 属性。</p>
 <p><img src="pic/latex-custom-symbols.png" class="img-fluid" style="width:100.0%"></p>
 <p>首先我们创建一个 symbols.tex 文件，在该文件中输入自定义命令有关的代码，例如：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>\newcommand{\im}{\mathrm{i}}</span>
@@ -541,7 +541,7 @@ pdf:
 <p>上述代码中，<code>.latex</code> 表示这个块内的代码为 <code>LaTeX</code> 代码，<code>.content-hidden when-format="pdf"</code> 表示这部分代码不作用于 PDF 输出。</p>
 <p>在后续使用中，在<strong>每一个</strong>需要使用这些自定义命令的 .qmd 章节文件中，导入 _symbols.qmd 文件：</p>
 <p><img src="pic/sample-chapter-file.png" class="img-fluid" style="width:100.0%"></p>
-<p>预览效果与 PDF 输出效果分别如下，可以看到，自定义 <code>LaTeX</code> 命令在 PDF 输出和 HTML 输出中都能够正确识别。</p>
+<p>预览效果与 PDF 输出效果分别如下，可以看到，自定义 LaTeX 命令在 PDF 输出和 HTML 输出中都能够正确识别。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pic/sample-chapter-preview.png" class="img-fluid figure-img" style="width:70.0%"></p>

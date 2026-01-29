@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>文档主题 – 使用 Quarto 编写学术和技术文档</title>
+<title>HTML 输出主题 – 使用 Quarto 编写学术和技术文档</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -300,7 +300,7 @@ window.MathJax = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theme.html"><span class="chapter-title">文档主题</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./theme.html"><span class="chapter-title">HTML 输出主题</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
@@ -353,7 +353,7 @@ window.MathJax = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./latex-related-settings.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">配置 LaTeX</span></a>
+  <a href="./latex-config.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">配置 LaTeX</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -363,7 +363,7 @@ window.MathJax = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./theme.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">文档主题</span></a>
+  <a href="./theme.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">HTML 输出主题</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -392,7 +392,12 @@ window.MathJax = {
     <h2 id="toc-title">目录</h2>
    
   <ul>
-  <li><a href="#设置文档字体" id="toc-设置文档字体" class="nav-link active" data-scroll-target="#设置文档字体">设置文档字体</a></li>
+  <li><a href="#设置-html-输出字体" id="toc-设置-html-输出字体" class="nav-link active" data-scroll-target="#设置-html-输出字体">设置 HTML 输出字体</a></li>
+  <li><a href="#深色模式" id="toc-深色模式" class="nav-link" data-scroll-target="#深色模式">深色模式</a>
+  <ul class="collapse">
+  <li><a href="#将-cosmo-主题应用于深色模式" id="toc-将-cosmo-主题应用于深色模式" class="nav-link" data-scroll-target="#将-cosmo-主题应用于深色模式">将 cosmo 主题应用于深色模式</a></li>
+  <li><a href="#代码块" id="toc-代码块" class="nav-link" data-scroll-target="#代码块">代码块</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -402,7 +407,7 @@ window.MathJax = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">文档主题</span></h1>
+<h1 class="title"><span class="chapter-title">HTML 输出主题</span></h1>
 </div>
 
 
@@ -419,9 +424,9 @@ window.MathJax = {
 </header>
 
 
-<section id="设置文档字体" class="level2">
-<h2 class="anchored" data-anchor-id="设置文档字体">设置文档字体</h2>
-<p>文档字体需要通过 <code>css</code> 文件来设置。</p>
+<section id="设置-html-输出字体" class="level2">
+<h2 class="anchored" data-anchor-id="设置-html-输出字体">设置 HTML 输出字体</h2>
+<p>本节我们以 Google 的开源字体 Roboto 和 Noto Sans SC，以及 JetBrains 的开源等宽字体 JetBrains Mono 为例，介绍文档 HTML 输出字体的设置。文档字体需要通过 css 文件来设置，首先，新建一个 custom.css 文件，在该文件中设置文档字体：</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* custom.css */</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
@@ -435,9 +440,32 @@ window.MathJax = {
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>code<span class="op">,</span> pre {</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">"JetBrains Mono"</span><span class="op">,</span> <span class="dv">monospace</span> <span class="at">!important</span><span class="op">;</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></div>
-<p>在进行 HTML 渲染时，待渲染的字符会逐级向下地从 <code>font-family</code> 列表中查找字体。上述代码将文档的英文字体设置为 <code>Roboto</code>，由于中文字符并不包含在 <code>Roboto</code> 中，汉字会向下查找到 <code>Noto Sans SC</code>。</p>
+<p>上述代码设置了 <code>font-family</code> 列表，在进行 HTML 渲染时，待渲染的字符会逐级向下地从 <code>font-family</code> 列表中查找字体，如果找到则使用该字体，否则继续向下查找。上述代码将文档的英文字体设置为 Roboto，由于中文字符并不包含在 Roboto 中，因此汉字会向下查找到 Noto Sans SC。此外，我们还设置了作用于代码块中的等宽字体为 JetBrains Mono。</p>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>在定义 <code>font-family</code> 列表时，建议<strong>将英文字体放在中文字体之前</strong>，这是因为中文字体的字符集更大，将中文字体放在前面会导致英文字符直接匹配中文字体，从而按照中文字体的样式渲染。然而，由于中文字体主要是为了适应方块字的特点而设计的，因此就算是同一字体集或者本就设计为共同使用的字体集（如 Roboto 和 Noto Sans 系列），中文字体中的英文字符也会和英文字体集中的字符在紧凑程度方面有较为细微的差别。</p>
+</div>
+</div>
+</div>
+<p>为了使该配置对项目生效，在 _quarto.yml 文件中添加以下配置：</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> custom.css</span></span></code></pre></div><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="深色模式" class="level2">
+<h2 class="anchored" data-anchor-id="深色模式">深色模式</h2>
+<section id="将-cosmo-主题应用于深色模式" class="level3">
+<h3 class="anchored" data-anchor-id="将-cosmo-主题应用于深色模式">将 cosmo 主题应用于深色模式</h3>
+</section>
+<section id="代码块" class="level3">
+<h3 class="anchored" data-anchor-id="代码块">代码块</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -14,7 +14,7 @@
     "href": "index.html#关于本书",
     "title": "使用 Quarto 编写学术和技术文档",
     "section": "关于本书",
-    "text": "关于本书\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "关于本书\n本项目主要参考 Quarto Community (2024) 的官方文档，并结合自己的实际需求进行了一些定制化修改。\nThis is a Quarto book. To learn more about Quarto books visit https://quarto.org/docs/books.",
     "crumbs": [
       "前言"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#主要任务",
     "title": "使用 Quarto 编写学术和技术文档",
     "section": "主要任务",
-    "text": "主要任务\nMarkdown 作为一种轻量级的标记语言，在日常的文档编辑中被广泛使用。然而，Markdown 的功能有些 “简陋”，并不能满足学术文档、技术文档的较复杂的排版需求。\nLaTeX 作为一种专业的排版系统，在学术文档、技术文档的排版中被广泛使用。然而，LaTeX 的语法较为复杂，学习成本较高，对于初学者来说并不友好，即使熟练使用，也会花费大量的时间，效率不高。\nQuarto 是 Markdown 的诸多扩展之一，在保持 Markdown 的简洁、易用的基础上，提供了丰富的功能以满足学术文档、技术文档的排版需求。本项目的工作就是把我们之前基于 LaTeX 的文档内容无缝地迁移到 Quarto 上来，从而实现一份源代码，各种输出格式的高效内容编辑工作流。\n\n\n\n\n\n\n注记成果展示\n\n\n\n最近在看 Cohen (2022) ，全当是对线性代数做一个偏应用的复习了。复习过程中所做的一些记录（当然是融合了以前的偏理论的内容）可以在 https://strik0rium.github.io/linear-algebra-web/ 中查看。",
+    "text": "主要任务\nMarkdown 作为一种轻量级的标记语言，在日常的文档编辑中被广泛使用。然而，Markdown 的功能有些 “简陋”，并不能满足学术文档、技术文档的较复杂的排版需求。\nLaTeX 作为一种专业的排版系统，在学术文档、技术文档的排版中被广泛使用。然而，LaTeX 的语法较为复杂，学习成本较高，对于初学者来说并不友好，即使熟练使用，也会花费大量的时间，效率不高。\nQuarto 是 Markdown 的诸多扩展之一，在保持 Markdown 的简洁、易用的基础上，提供了丰富的功能以满足学术文档、技术文档的排版需求。本项目的工作就是把我们之前基于 LaTeX 的文档内容无缝地迁移到 Quarto 上来，从而实现一份源代码，各种输出格式的高效内容编辑工作流。",
     "crumbs": [
       "前言"
     ]
@@ -34,17 +34,7 @@
     "href": "index.html#目标读者-前置知识储备",
     "title": "使用 Quarto 编写学术和技术文档",
     "section": "目标读者 & 前置知识储备",
-    "text": "目标读者 & 前置知识储备\n本书不适合在日常写作中不涉及大量公式、或更偏向于 Markdown 特性的读者，也不适合主要使用 LaTeX 且无需 Markdown 特性的用户，或者仅有 PDF 生成需求、没有 HTML 等格式输出和内容分发需求的人群，以及已经使用 Docusaurus 等其他基于 Markdown 的文档工具的读者。\n本书适合已经具备一定 Markdown 和 LaTeX 基础，并且希望结合两者优势、提升写作效率的读者。需要使用 LaTeX 的读者，通常会在日常写作中涉及大量公式排版、TikZ 绘图，并希望通过各类 LaTeX 环境来对文档结构进行更灵活的划分。而对 Markdown 有需求的读者，则更希望凭借其简洁的语法，实现高效的图文混排、列表编辑1、代码块编辑，并用 callout 特性生成醒目的提示信息等内容。\n\n需要对Markdown 有一定的了解，熟悉Markdown 的语法，能够使用Markdown 编写文档。\n需要读者完成 LaTeX 的环境配置，但这并不是必须的。没有完成 LaTeX 配置的读者可以参考 Quarto 的官方文档完成配置。如果你不确定你的 LaTeX 环境是否已经配置完成，可以尝试在系统终端中执行如下命令：\n$ pdflatex --version\n$ xelatex --version\n$ lualatex --version\n$ latexmk --version\n如果上述命令都能正确输出版本信息，则说明你的 LaTeX 环境已经配置完成。否则，请参考 Quarto 的官方文档或者 这个视频 完成配置。",
-    "crumbs": [
-      "前言"
-    ]
-  },
-  {
-    "objectID": "index.html#致谢",
-    "href": "index.html#致谢",
-    "title": "使用 Quarto 编写学术和技术文档",
-    "section": "致谢",
-    "text": "致谢\n感谢 Cohen (2022) 的作者，让我从此多了一个给偏 CS、DataSci、AI 和 FinTech 方向的同学推荐线性代数学习资料的选择，拒绝同济线性代数、北大高等代数等诸多防自学教材的理由又多了一个。\n感谢 ChatGPT 和 Cursor，他们的编码能力实在是很强，帮我节省了许多工作量（但同时也让我多走了很多弯路）。",
+    "text": "目标读者 & 前置知识储备\n本书不适合在日常写作中不涉及大量公式、或更偏向于 Markdown 特性的读者，也不适合主要使用 LaTeX 且无需 Markdown 特性的用户，或者仅有 PDF 生成需求、没有 HTML 等格式输出和内容分发需求的人群，以及已经使用 Docusaurus 等其他基于 Markdown 的文档工具的读者。\n本书适合已经具备一定 Markdown 和 LaTeX 基础，并且希望结合两者优势、提升写作效率的读者。需要使用 LaTeX 的读者，通常会在日常写作中涉及大量公式排版、TikZ 绘图，并希望通过各类 LaTeX 环境来对文档结构进行更灵活的划分。而对 Markdown 有需求的读者，则更希望凭借其简洁的语法，实现高效的图文混排、列表编辑1、代码块编辑，并用 callout 特性生成醒目的提示信息等内容。\n\n需要对Markdown 有一定的了解，熟悉Markdown 的语法，能够使用Markdown 编写文档。\n需要读者完成 LaTeX 的环境配置，但这并不是必须的。没有完成 LaTeX 配置的读者可以参考 Quarto 的官方文档完成配置。如果你不确定你的 LaTeX 环境是否已经配置完成，可以尝试在系统终端中执行如下命令：\n$ pdflatex --version\n$ xelatex --version\n$ lualatex --version\n$ latexmk --version\n如果上述命令都能正确输出版本信息，则说明你的 LaTeX 环境已经配置完成。否则，请参考 Quarto 的官方文档 (Quarto Community 2024) 或者 这个视频 完成配置。",
     "crumbs": [
       "前言"
     ]
@@ -54,7 +44,7 @@
     "href": "index.html#讲义获取",
     "title": "使用 Quarto 编写学术和技术文档",
     "section": "讲义获取",
-    "text": "讲义获取\n本系列没有 PDF 版讲义。\n\n\n\n\nCohen, M. X. 2022. Practical Linear Algebra for Data Science. O’Reilly Media. https://books.google.com.hk/books?id=GHmHEAAAQBAJ.",
+    "text": "讲义获取\n本系列没有 PDF 版讲义。\n\n\n\n\nQuarto Community. 2024. 《Quarto Guide》. https://quarto.org/docs/guide/.",
     "crumbs": [
       "前言"
     ]
@@ -150,8 +140,8 @@
     ]
   },
   {
-    "objectID": "latex-related-settings.html",
-    "href": "latex-related-settings.html",
+    "objectID": "latex-config.html",
+    "href": "latex-config.html",
     "title": "配置 LaTeX",
     "section": "",
     "text": "PDF 输出格式配置\n本章节详细介绍了本项目中的 LaTeX 相关配置，包括 PDF 输出格式设置、文档类配置、页面布局、字体设置以及各种宏包的使用。这些设置确保了生成的 PDF 文档具有专业的外观和良好的排版效果。\n在 Quarto 项目的 _quarto.yml 配置文件中，通过 pdf 相关设置可以灵活地指定 PDF 输出的排版样式、文档类、页面尺寸和各种格式参数，从而实现专业而定制化的排版效果。\n本项目使用 ctexbook 作为 PDF 输出的文档类，这是专门为中文文档设计的 LaTeX 文档类：\nctexbook 是专门为中文文档设计的 LaTeX 文档类，支持中文排版，自动处理中文字体、标点符号等。\nfontsize: 10pt 设置基础字体大小为 10 点，适合学术文档阅读。\nxelatex 使用 xelatex 作为 PDF 生成引擎，xelatex 对 Unicode 和现代字体支持更好，特别适合处理中文字符和自定义字体。",
@@ -160,8 +150,8 @@
     ]
   },
   {
-    "objectID": "latex-related-settings.html#pdf-输出格式配置",
-    "href": "latex-related-settings.html#pdf-输出格式配置",
+    "objectID": "latex-config.html#pdf-输出格式配置",
+    "href": "latex-config.html#pdf-输出格式配置",
     "title": "配置 LaTeX",
     "section": "",
     "text": "pdf:\n  documentclass: ctexbook\n  fontsize: 10pt\n  pdf-engine: xelatex",
@@ -170,8 +160,8 @@
     ]
   },
   {
-    "objectID": "latex-related-settings.html#页面布局设置",
-    "href": "latex-related-settings.html#页面布局设置",
+    "objectID": "latex-config.html#页面布局设置",
+    "href": "latex-config.html#页面布局设置",
     "title": "配置 LaTeX",
     "section": "页面布局设置",
     "text": "页面布局设置\n项目配置了标准的 A4 页面尺寸和合适的边距：\ngeometry:\n  - paperwidth=210mm\n  - paperheight=297mm\n  - top=36.8mm\n  - bottom=31.8mm\n  - left=25.4mm\n  - right=25.4mm\n\n页面尺寸: 210mm × 297mm (A4 标准)\n上边距: 36.8mm，为页眉和章节标题留出空间\n下边距: 31.8mm，为页脚留出空间\n左右边距: 25.4mm，确保文本不会过于靠近页面边缘",
@@ -180,8 +170,8 @@
     ]
   },
   {
-    "objectID": "latex-related-settings.html#字体配置",
-    "href": "latex-related-settings.html#字体配置",
+    "objectID": "latex-config.html#字体配置",
+    "href": "latex-config.html#字体配置",
     "title": "配置 LaTeX",
     "section": "字体配置",
     "text": "字体配置\n在 _quarto.yml 文件的 pdf 配置中，include-in-header 用于向生成的 LaTeX 文档头部插入自定义的 LaTeX 代码片段。这些代码会在每次编译 PDF 时自动插入到 LaTeX 源文件的 \\begin{document} 之前，常用于字体设置、引入额外的宏包、定义自定义命令或调整全局排版风格等。例如可以用它为整个文档设定等宽字体、插入自定义标题样式、统一公式渲染模式等配置。从而更灵活地微调最终输出文档的外观与功能。\ninclude-in-header:\n  text: |\n    \\setmonofont{JetBrains Mono}\n使用 JetBrains Mono 作为等宽字体，这是一个专为开发者设计的现代等宽字体，具有良好的可读性。你可以访问 https://www.jetbrains.com/lp/mono/ 了解更多关于 JetBrains Mono 的信息和下载该字体。",
@@ -190,8 +180,8 @@
     ]
   },
   {
-    "objectID": "latex-related-settings.html#数学公式设置",
-    "href": "latex-related-settings.html#数学公式设置",
+    "objectID": "latex-config.html#数学公式设置",
+    "href": "latex-config.html#数学公式设置",
     "title": "配置 LaTeX",
     "section": "数学公式设置",
     "text": "数学公式设置\ninclude-in-header:\n  text: |\n    \\everymath{\\displaystyle}\n将所有行内数学公式显示为显示模式，使公式更加清晰。",
@@ -200,11 +190,11 @@
     ]
   },
   {
-    "objectID": "latex-related-settings.html#自定义符号",
-    "href": "latex-related-settings.html#自定义符号",
+    "objectID": "latex-config.html#自定义符号",
+    "href": "latex-config.html#自定义符号",
     "title": "配置 LaTeX",
     "section": "自定义符号",
-    "text": "自定义符号\n在使用 LaTeX 编写文档时，时常会需要自定义一些符号，并在多个文件中使用它们，例如，把 \\mathrm{i} 简化为 \\im，可以极大提高代码的紧凑程度。在 LaTeX 中，这涉及到两个命令：\n\\newcommand{\\im}{\\mathrm{i}}\n\\renewcommand{\\im}{\\mathrm{i}}\n其中，第一个命令 \\newcommand 用于定义新的命令，第二个命令 \\renewcommand 用于重新定义已有的命令。需要注意的是，对已经定义过的命令进行重新定义时，需要使用 \\renewcommand 命令，而不是 \\newcommand 命令，否则将导致报错。也就是说，对于 LaTeX 代码，我们需要保证每一个自定义命令只调用一次 \\newcommand 命令，所有后续更改都通过 \\renewcommand 命令完成。\n对于纯 LaTeX 项目来说，这两个命令已经足够使用，我们可以在文档的导言区中插入相关自定义命令的代码。后续所有正文章节中需要使用的 LaTeX 命令，都已经在导言区中被一次性导入了。\n\n\n\n传统 LaTeX 项目中复用自定义命令的方法\n\n\n然而，在 Quarto 项目中，由于不同 .qmd 文件之间是相互独立的，也就是说，对于每一个独立的 .qmd 文件，都需要 “导入” 一次已有的自定义命令代码，否则这些自定义命令不会被 MathJax 识别。因此，如果将自定义命令的配置代码放在 _symbols.qmd 文件中，则每一个需要用到这些命令的文件都需要使用 {{&lt; include _symbols.qmd &gt;}} 命令导入该文件，否则这些自定义命令不会被 MathJax 识别。\n\n\n\nQuarto 项目中复用自定义命令的方法\n\n\n这就引出了矛盾：对于基于 LaTeX 的 PDF 输出来说，一次导入已经足够；但是对于 HTML 输出来说，第二次及其以后的导入都将对 “已经定义过的命令” 重新调用 \\newcommand 命令，从而导致 PDF 输出端报错。也就是说，PDF 输出只需要导入一次，而 HTML 输出需要导入多次。\n解决方案是，我们把针对两种输出的自定义命令代码分开配置，这需要使用 _quarto.yml 文件中的 include-in-header 配置项，以及 Quarto 的 .content-hidden 属性。\n\n首先我们创建一个 symbols.tex 文件，在该文件中输入自定义命令有关的代码，例如：\n\\newcommand{\\im}{\\mathrm{i}}\n\\newcommand{\\jm}{\\im}\n\\newcommand{\\rank}{\\operatorname{rank}}\n\\DeclareMathOperator{\\Res}{Res}\n\\DeclareMathOperator{\\argmax}{argmax}\n\\DeclareMathOperator{\\argmin}{argmin}\n\\DeclareMathOperator{\\tr}{tr}\n\\renewcommand{\\Re}{\\operatorname{Re}}\n\\renewcommand{\\Im}{\\operatorname{Im}}\n然后在 _quarto.yml 文件中添加以下配置：\ninclude-in-header:\n  text: |\n    \\input{tex_utils/symbols.tex}\n这样，在 PDF 输出时，这些自定义命令就会被正确导入。\n接下来我们对 HTML 输出进行配置，新建一个 _symbols.qmd 文件，在该文件中导入 symbols.tex 文件，并使用 .content-hidden 属性隐藏该文件的内容，设置这部分导入对 PDF 输出不可见：\n\n上述代码中，.latex 表示这个块内的代码为 LaTeX 代码，.content-hidden when-format=\"pdf\" 表示这部分代码不作用于 PDF 输出。\n在后续使用中，在每一个需要使用这些自定义命令的 .qmd 章节文件中，导入 _symbols.qmd 文件：\n\n预览效果与 PDF 输出效果分别如下，可以看到，自定义 LaTeX 命令在 PDF 输出和 HTML 输出中都能够正确识别。\n\n\n\nHTML 输出\n\n\n\n\n\nPDF 输出",
+    "text": "自定义符号\n在使用 LaTeX 编写文档时，时常会需要自定义一些符号，并在多个文件中使用它们，例如，把 \\mathrm{i} 简化为 \\im，可以极大提高代码的紧凑程度。在 LaTeX 中，这涉及到两个命令：\n\\newcommand{\\im}{\\mathrm{i}}\n\\renewcommand{\\im}{\\mathrm{i}}\n其中，第一个命令 \\newcommand 用于定义新的命令，第二个命令 \\renewcommand 用于重新定义已有的命令。需要注意的是，对已经定义过的命令进行重新定义时，需要使用 \\renewcommand 命令，而不是 \\newcommand 命令，否则将导致报错。也就是说，对于 LaTeX 代码，我们需要保证每一个自定义命令只调用一次 \\newcommand 命令，所有后续更改都通过 \\renewcommand 命令完成。\n对于纯 LaTeX 项目来说，这两个命令已经足够使用，我们可以在文档的导言区中插入相关自定义命令的代码。后续所有正文章节中需要使用的 LaTeX 命令，都已经在导言区中被一次性导入了。\n\n\n\n传统 LaTeX 项目中复用自定义命令的方法\n\n\n然而，在 Quarto 项目中，由于 MathJax 在 HTML 中是基于页面局部渲染的，不像 LaTeX 编译时拥有全局状态，所以每个页面都必须“看到”宏定义才能正确解析。也就是说，不同 .qmd 文件之间是相互独立的，对于每一个独立的 .qmd 文件，都需要 “导入” 一次已有的自定义命令代码，否则这些自定义命令不会被 MathJax 识别。因此，如果将自定义命令的配置代码放在 _symbols.qmd 文件中，则每一个需要用到这些命令的文件都需要使用 {{&lt; include _symbols.qmd &gt;}} 命令导入该文件，否则这些自定义命令不会被 MathJax 识别。\n\n\n\nQuarto 项目中复用自定义命令的方法\n\n\n这就引出了矛盾：对于基于 LaTeX 的 PDF 输出来说，一次导入已经足够；但是对于 HTML 输出来说，第二次及其以后的导入都将对 “已经定义过的命令” 重新调用 \\newcommand 命令，从而导致 PDF 输出端报错。也就是说，PDF 输出只需要导入一次，而 HTML 输出需要导入多次。\n解决方案是，我们把针对两种输出的自定义命令代码分开配置，这需要使用 _quarto.yml 文件中的 include-in-header 配置项，以及 Quarto 的 .content-hidden 属性。\n\n首先我们创建一个 symbols.tex 文件，在该文件中输入自定义命令有关的代码，例如：\n\\newcommand{\\im}{\\mathrm{i}}\n\\newcommand{\\jm}{\\im}\n\\newcommand{\\rank}{\\operatorname{rank}}\n\\DeclareMathOperator{\\Res}{Res}\n\\DeclareMathOperator{\\argmax}{argmax}\n\\DeclareMathOperator{\\argmin}{argmin}\n\\DeclareMathOperator{\\tr}{tr}\n\\renewcommand{\\Re}{\\operatorname{Re}}\n\\renewcommand{\\Im}{\\operatorname{Im}}\n然后在 _quarto.yml 文件中添加以下配置：\ninclude-in-header:\n  text: |\n    \\input{tex_utils/symbols.tex}\n这样，在 PDF 输出时，这些自定义命令就会被正确导入。\n接下来我们对 HTML 输出进行配置，新建一个 _symbols.qmd 文件，在该文件中导入 symbols.tex 文件，并使用 .content-hidden 属性隐藏该文件的内容，设置这部分导入对 PDF 输出不可见：\n\n上述代码中，.latex 表示这个块内的代码为 LaTeX 代码，.content-hidden when-format=\"pdf\" 表示这部分代码不作用于 PDF 输出。\n在后续使用中，在每一个需要使用这些自定义命令的 .qmd 章节文件中，导入 _symbols.qmd 文件：\n\n预览效果与 PDF 输出效果分别如下，可以看到，自定义 LaTeX 命令在 PDF 输出和 HTML 输出中都能够正确识别。\n\n\n\nHTML 输出\n\n\n\n\n\nPDF 输出",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>配置 LaTeX</span>"
     ]
@@ -252,21 +242,31 @@
   {
     "objectID": "theme.html",
     "href": "theme.html",
-    "title": "文档主题",
+    "title": "HTML 输出主题",
     "section": "",
-    "text": "设置文档字体\n文档字体需要通过 css 文件来设置。\n在进行 HTML 渲染时，待渲染的字符会逐级向下地从 font-family 列表中查找字体。上述代码将文档的英文字体设置为 Roboto，由于中文字符并不包含在 Roboto 中，汉字会向下查找到 Noto Sans SC。",
+    "text": "设置 HTML 输出字体\n本节我们以 Google 的开源字体 Roboto 和 Noto Sans SC，以及 JetBrains 的开源等宽字体 JetBrains Mono 为例，介绍文档 HTML 输出字体的设置。文档字体需要通过 css 文件来设置，首先，新建一个 custom.css 文件，在该文件中设置文档字体：\n上述代码设置了 font-family 列表，在进行 HTML 渲染时，待渲染的字符会逐级向下地从 font-family 列表中查找字体，如果找到则使用该字体，否则继续向下查找。上述代码将文档的英文字体设置为 Roboto，由于中文字符并不包含在 Roboto 中，因此汉字会向下查找到 Noto Sans SC。此外，我们还设置了作用于代码块中的等宽字体为 JetBrains Mono。\n为了使该配置对项目生效，在 _quarto.yml 文件中添加以下配置：",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>文档主题</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HTML 输出主题</span>"
     ]
   },
   {
-    "objectID": "theme.html#设置文档字体",
-    "href": "theme.html#设置文档字体",
-    "title": "文档主题",
+    "objectID": "theme.html#设置-html-输出字体",
+    "href": "theme.html#设置-html-输出字体",
+    "title": "HTML 输出主题",
     "section": "",
-    "text": "/* custom.css */\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');\n\nbody {\n  font-family: \"Roboto\", \"Noto Sans\", \"Noto Sans SC\", sans-serif;\n}\n\ncode, pre {\n  font-family: \"JetBrains Mono\", monospace !important;\n}",
+    "text": "/* custom.css */\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');\n\nbody {\n  font-family: \"Roboto\", \"Noto Sans\", \"Noto Sans SC\", sans-serif;\n}\n\ncode, pre {\n  font-family: \"JetBrains Mono\", monospace !important;\n}\n\n\n\n\n\n\n\n在定义 font-family 列表时，建议将英文字体放在中文字体之前，这是因为中文字体的字符集更大，将中文字体放在前面会导致英文字符直接匹配中文字体，从而按照中文字体的样式渲染。然而，由于中文字体主要是为了适应方块字的特点而设计的，因此就算是同一字体集或者本就设计为共同使用的字体集（如 Roboto 和 Noto Sans 系列），中文字体中的英文字符也会和英文字体集中的字符在紧凑程度方面有较为细微的差别。\n\n\n\n\nformat:\n  html:\n    css: custom.css",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>文档主题</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HTML 输出主题</span>"
+    ]
+  },
+  {
+    "objectID": "theme.html#深色模式",
+    "href": "theme.html#深色模式",
+    "title": "HTML 输出主题",
+    "section": "深色模式",
+    "text": "深色模式\n\n将 cosmo 主题应用于深色模式\n\n\n代码块",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>HTML 输出主题</span>"
     ]
   },
   {
@@ -304,7 +304,7 @@
     "href": "references.html",
     "title": "参考文献",
     "section": "",
-    "text": "Cohen, M. X. 2022. Practical Linear Algebra for Data Science.\nO’Reilly Media. https://books.google.com.hk/books?id=GHmHEAAAQBAJ.",
+    "text": "Quarto Community. 2024. “Quarto Guide.” https://quarto.org/docs/guide/.",
     "crumbs": [
       "参考文献"
     ]
